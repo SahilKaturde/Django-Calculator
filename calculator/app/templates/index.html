@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astornide Calculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <main>
+
+        <div class="div1">
+            <h4><i>This is a Calculator</i></h4>
+        </div>
+
+        <div class="div2">
+            <div class="box">
+                <form method="post" action="">
+                    {%csrf_token%}
+                    <label for="" >Value 1</label>
+                    <br>
+                    <input class="glass-input" type="text" name="value1" id="">
+                    <br>
+                    <br>
+                    <label for="">Value 2</label>
+                    <br>
+                    <input class="glass-input" type="text" name="value2" id="">
+                    <br>
+                    <br>
+                    <select name="opr" class="glass-input" id="">
+                        <option id="wagh" value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button class="glass-input" type="submit">Show</button>
+                    <br>
+                    <br>
+                    <label for="">Output</label>
+                    <div class="glass-input"><h1>{{c}}</h1></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="div3">
+            <h2>by Sahil Katurde</h2>
+        </div>
+
+    </main>
+
+    <script src="{%static 'hmm.js' %}"></script>
+</body>
+</html>
